@@ -51,7 +51,7 @@ public class IntsTests {
     }
 
     @Test
-    public void empty_interval_is_does_not_change_the_array() {
+    public void given_an_empty_interval_insertionSort_does_not_change_the_array() {
         // Arrange
         int[] values = {-20,4,-1,2,1,0,10};
         int[] copy = Arrays.copyOf(values, values.length);
