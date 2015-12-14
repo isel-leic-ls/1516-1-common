@@ -4,6 +4,8 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.*;
 
 public class HerokuFirstHttpServer {
+
+    public static boolean flag = true;
     
     public static void main(String[] args) throws Exception {
         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
@@ -13,6 +15,7 @@ public class HerokuFirstHttpServer {
         context.addServlet(new ServletHolder(new TimeServlet()),"/*");
         //context.addServlet(new ServletHolder(new StudentsServlet()),"/*");
         server.start();
+        if(flag) throw new Exception("Can't see this");
         server.join();
     }  
 }
