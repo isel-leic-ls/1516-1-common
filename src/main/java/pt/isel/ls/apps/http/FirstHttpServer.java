@@ -20,9 +20,8 @@ public class FirstHttpServer {
         handler.addServletWithMapping(TimeServlet.class, "/*");
         server.start();
         System.out.println("Server is started");
-        
-        System.in.read();
-        server.stop();
+
+        server.join();
         System.out.println("Server is stopped, bye");        
     }    
 }
