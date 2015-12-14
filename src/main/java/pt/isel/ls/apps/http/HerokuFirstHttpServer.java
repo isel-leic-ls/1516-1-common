@@ -12,10 +12,11 @@ public class HerokuFirstHttpServer {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
         server.setHandler(context);
-        context.addServlet(new ServletHolder(new TimeServlet()),"/*");
+        context.addServlet(new ServletHolder(new TimeServlet()), "/*");
         //context.addServlet(new ServletHolder(new StudentsServlet()),"/*");
-        server.start();
         if(flag) throw new Exception("Can't see this");
+        server.start();
+
         server.join();
     }  
 }
