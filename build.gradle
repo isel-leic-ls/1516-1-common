@@ -11,3 +11,4 @@ dependencies {
 mainClassName = "pt.isel.ls.apps.http.HerokuFirstHttpServer"
 
 task stage(dependsOn: ['clean', 'installApp'])
+
